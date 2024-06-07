@@ -1,5 +1,5 @@
 import React, { useMemo, useState } from 'react';
-import { useCounter } from '../hooks/useCounter';
+import { useCounter } from '../hooks';
 
 
 const heavyStuff = (iterationNumber = 100) => {
