@@ -10,3 +10,7 @@ button {
     display: flex;
     width: 18rem;
 }
+
+a {
+    margin-right: 5px;
+}
