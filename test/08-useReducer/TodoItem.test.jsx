@@ -20,7 +20,7 @@ describe('Pruebas en el componente <TodoItem />', () => {
         
         const liElement = screen.getByRole('listitem');
 
-        expect(liElement.className).toBe('align-self-center');
+        expect(liElement.className).toBe('list-group-item d-flex justify-content-between');
 
         const spanElement = screen.getByLabelText('span');
 
@@ -41,7 +41,7 @@ describe('Pruebas en el componente <TodoItem />', () => {
     });
 
     test('span debe de llamar el ToggleTodo cuando se hace click', () => { 
-        render( <TodoItem todo={ todo } onToggleTodo={onToggleTodoMock} onDeleteTodo={ onDeleteTodoMock} /> )
+        render( <TodoItem todo={ todo } onToggleTodo={onToggleTodoMock} onDeleteTodo={ onDeleteTodoMock } /> )
 
         const spanElement = screen.getByLabelText('span');
 
@@ -51,12 +51,12 @@ describe('Pruebas en el componente <TodoItem />', () => {
     });
 
     test('button debe de llamar el deleteTodo', () => { 
-        render( <TodoItem todo={ todo } onToggleTodo={onToggleTodoMock} onDeleteTodo={ onDeleteTodoMock} /> )
+        render( <TodoItem todo={ todo } onToggleTodo={onToggleTodoMock} onDeleteTodo={ onDeleteTodoMock } /> )
 
         const deleteButton = screen.getByRole('button');
 
         fireEvent.click(deleteButton);
 
-        expect(onToggleTodoMock).toHaveBeenCalledWith(todo.id);
+        expect(onDeleteTodoMock).toHaveBeenCalledWith(todo.id);
     });
 });

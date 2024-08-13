@@ -29,10 +29,10 @@ describe('Pruebas en todoReducer', () => {
     });
 
     test('debe de eliminar un todo', () => {
-        const action = [{
+        const action = {
             type: '[TODO] Remove Todo',
             payload: 1
-        }];
+        };
 
         const newState = todoReducer(initialState, action);
         expect(newState.length).toBe(0);

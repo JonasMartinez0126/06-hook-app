@@ -55,7 +55,7 @@ describe('Pruebas en <MultipleCustomHooks />', () => {
         render(<MultipleCustomHooks />);
         expect( screen.getByText('bulbasaur') );
 
-        screen.debug();
+        //screen.debug();
     });
 
     test('debe de llamar la funcion incrementar', () => {
